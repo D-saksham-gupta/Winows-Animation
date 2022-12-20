@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows 11</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        body{
+            background-image: url('desktop.png');
+            background-size: cover;
+            overflow: hidden;
+            
+        }
+        .taskbar{
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            height: 35px;
+            background-color: #d8dbec;
+            z-index: 110;
+            
+        }
+        .startmenu{
+            position: absolute;
+            bottom: -650px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            transition: all 0.3s ease-in;
+            z-index: 110;
+        }
+        .vsc img{
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+        .vsc{
+            position: absolute;
+            bottom: -1066px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            transition: all 0.3s ease-in;
+            
+            
+        }
+        .file img{
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            
+        }
+        .file{
+            position: absolute;
+            bottom: -1066px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            transition: all 0.3s ease-in;
+         
+        }
+        .search img{
+           height: 400px;
+            overflow: hidden;
+        }
+        .search{
+            position: absolute;
+            bottom: -650px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            transition: all 0.3s ease-in;
+            z-index: 110;
+        }
+        .exe{
+            position: absolute;
+            bottom: 50px;
+          
+            width: 100%;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: -257px;
+            z-index: 110;
+            margin-left: -183px;
+        }
+        .exe img{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 28px;
+            width: 28px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="taskbar">
+        <img src="download.png" alt="" class="task">
+        <img src="search.png" alt="" class="searching">
+        <img src="taskk.jpg" alt="" class="fileE">
+        <img src="icon3.png" alt="" class="vscode">
+        
+        
+    </div>
+    <div class="startmenu">
+        <img src="task.png" alt="">
+    </div>
+    <div class="vsc">
+        <img src="vs.png" alt="">
+    </div>
+    <div class="file">
+        <img src="img.png" alt="">
+    </div>
+    <div class="search">
+        <img src="searchbar.png" alt="">
+        
+    </div>
+    <div class="exe">
+        <img src="https://winaero.com/blog/wp-content/uploads/2018/12/file-explorer-folder-libraries-icon-18298.png" alt="" class="exxe">
+    </div>
+    
+</body>
+<script>
+    let taskbar=document.getElementsByClassName("task")[0]
+    let startmenu=document.getElementsByClassName("startmenu")[0]
+
+    taskbar.addEventListener("click", ()=>{
+        if(startmenu.style.bottom == "50px"){
+            startmenu.style.bottom = "-650px";
+        }
+        else{
+            startmenu.style.bottom = "50px";
+            searchbar.style.bottom = "-650px";
+        }
+    })
+
+    let vs=document.getElementsByClassName("vscode")[0]
+    let visual=document.getElementsByClassName("vsc")[0]
+
+    vs.addEventListener("click", ()=>{
+        if(visual.style.bottom == "0px"){
+            visual.style.bottom = "-1066px"
+        }
+        else{
+            visual.style.bottom = "0px";
+            startmenu.style.bottom = "-650px";
+            searchbar.style.bottom = "-650px";
+        }
+    })
+    let sv=document.getElementsByClassName("fileE")[0]
+    let explorer=document.getElementsByClassName("file")[0]
+
+    sv.addEventListener("click", ()=>{
+        if(explorer.style.bottom == "-5px"){
+            explorer.style.bottom = "-1066px"
+        }
+        else{
+            explorer.style.bottom = "-5px";
+            startmenu.style.bottom = "-650px";
+            searchbar.style.bottom = "-650px";
+        }
+    })
+    let search=document.getElementsByClassName("searching")[0]
+    let searchbar=document.getElementsByClassName("search")[0]
+   
+    search.addEventListener("click", ()=>{
+        if(searchbar.style.bottom == "50px"){
+            searchbar.style.bottom = "-650px";
+           
+           
+        }
+       
+        
+        else{
+            searchbar.style.bottom = "50px";
+            startmenu.style.bottom = "-650px";
+            fileee.style.bottom = "257px";
+           
+        }
+
+    })
+   
+
+   
+
+   
+</script>
+</html>
